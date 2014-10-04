@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-    .module('starRatingApp', []);
+    .module('starRatingApp', ['templates']);
 
 /**
  * @ngdoc function
