@@ -1,0 +1,24 @@
+span i:hover {
+    cursor:pointer;
+}
+.rating span.sb-star {
+    display: inline-block;
+}
+
+.rating span.star:hover {
+    cursor: pointer;
+}
+
+.sb-star  {
+    color: #777777;
+    padding-right: 1px;
+}
+
+.rating-star-active {
+    color: #e3cf7a;
+    padding-right: 1px;
+}
+
+.rating i {
+    font-size: 45px;
+}

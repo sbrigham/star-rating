@@ -1,0 +1,7 @@
+<div ng-controller="MainCtrl" id="sb-rating">
+    <div class="rating">
+        <span class="sb-stars">
+            <i class="fa fa-star sb-star" ng-mouseleave="leaveHoverStar(star)" ng-mouseover="hoverStar(star)" ng-class="star.class" ng-click="clickStar(star)" ng-repeat="star in stars"></i>
+        </span>
+    </div>
+</div>
