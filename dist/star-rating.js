@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-    .module('starRating', []);
+    .module('starRatingApp', ['templates']);
 
 /**
  * @ngdoc function
@@ -18,7 +18,7 @@ angular
  * # MainCtrl
  * Controller of the starRatingApp
  */
-angular.module('starRating', ['sbRatingDirective'])
+angular.module('starRatingApp', ['sbRatingDirective'])
     .controller('MainCtrl', ['$scope', 'Rating', function ($scope, Rating) {
         if(! $scope.max) {
             $scope.max = 5; // Default to 5 stars
@@ -124,4 +124,4 @@ angular.module('sbRatingDirective', [])
             }
         }
     }]);
-angular.module("templates", []).run(["$templateCache", function($templateCache) {$templateCache.put("partials/star-rating.html","<div ng-controller=\"MainCtrl\" id=\"sb-rating\">\n    <span class=\"sb-stars\">\n        <i class=\"star fa fa-star\" ng-mouseleave=\"leaveHoverStar(star)\" ng-mouseover=\"hoverStar(star)\" ng-class=\"star.class\" ng-click=\"clickStar(star)\" ng-repeat=\"star in stars\"></i>\n    </span>\n</div>");}]);
+angular.module("templates", []).run(["$templateCache", function($templateCache) {$templateCache.put("partials/star-rating.html","<div ng-controller=\"MainCtrl\" id=\"sb-rating\">\n    <div class=\"rating\">\n        <span class=\"sb-stars\">\n            <i class=\"fa fa-star sb-star\" ng-mouseleave=\"leaveHoverStar(star)\" ng-mouseover=\"hoverStar(star)\" ng-class=\"star.class\" ng-click=\"clickStar(star)\" ng-repeat=\"star in stars\"></i>\n        </span>\n    </div>\n</div>");}]);
