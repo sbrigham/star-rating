@@ -9,9 +9,9 @@
 
         <script src="/app.js"></script>
     </head>
-    <body ng-app="starRatingApp">
-        <div>
-            <star-rating></star-rating>
+    <body ng-app="starRating">
+        <div ng-controller="IndexController">
+            <star-rating init-rating="5" max="5" rating-changed="updateRating(rating)"></star-rating>
         </div>
     </body>
 </html>
