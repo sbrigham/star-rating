@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the starRatingApp
  */
-angular.module('starRating', [])
+angular.module('starRating', ['templates'])
     .directive('starRating', function() {
         return {
             restrict: 'E',
