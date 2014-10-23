@@ -36,14 +36,9 @@ angular.module('starRating', ['templates'])
                     });
                 }
 
-
                 $scope.clickStar = function(clicked_star) {
                     if ($scope.disabled) {
                         return false;
-                    }
-
-                    if ($scope.starClicked) {
-                        $scope.starClicked({rating: $scope.rating});
                     }
 
                     if ($scope.rating == clicked_star.star_num) {
@@ -60,6 +55,10 @@ angular.module('starRating', ['templates'])
                                 star.class = 'rating-star-active'
                             }
                         });
+                    }
+
+                    if ($scope.starClicked) {
+                        $scope.starClicked({rating: $scope.rating});
                     }
                 };
 
