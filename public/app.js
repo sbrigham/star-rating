@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the starRatingApp
  */
-angular.module('starRating', [])
+angular.module('starRating', ['templates'])
     .directive('starRating', function() {
         return {
             restrict: 'E',
@@ -19,7 +19,6 @@ angular.module('starRating', [])
                 $attrs.max = $attrs.max || 5;
                 $attrs.max = parseInt($attrs.max);
 
-                // Create the stars
                 $scope.stars = [];
                 var star = { class: 'star' };
                 for(var x=1; x<$attrs.max+1; x++) {
@@ -36,7 +35,10 @@ angular.module('starRating', [])
                     });
                 }
 
-                // Set the initial rating
+                if ($attrs.disabled == '' || $attrs.disabled) {
+                    return false;
+                }
+
                 if ($attrs.initRating) {
                     $attrs.initRating = parseInt($attrs.initRating);
                     $scope.rating = $attrs.initRating;
