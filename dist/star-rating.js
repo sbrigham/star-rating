@@ -62,10 +62,10 @@ angular.module('starRating', ['templates'])
                     }
                 };
 
-                if ($attrs.initRating) {
-                    $attrs.initRating = parseInt($attrs.initRating);
-                    $scope.rating = $attrs.initRating;
-                    $scope.setStars($attrs.initRating);
+                if ($attrs.initrating) {
+                    $attrs.initrating = parseInt($attrs.initrating);
+                    $scope.rating = $attrs.initrating;
+                    $scope.setStars($attrs.initrating);
                 }
 
                 if ($scope.disabled) {
